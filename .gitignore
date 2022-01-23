@@ -1,3 +1,7 @@
+# Hide the Token, wouldn't want that getting out
+
+token.json
+
 # Logs
 logs
 *.log
