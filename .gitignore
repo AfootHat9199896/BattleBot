@@ -1,6 +1,6 @@
 # Hide the Token, wouldn't want that getting out
 
-token.json
+config.json
 
 # Logs
 logs
