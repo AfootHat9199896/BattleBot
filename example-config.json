@@ -1,3 +1,5 @@
 {
+	"testClientId": "bot-id-here",
+	"testGuildId": "server-id-here",
 	"token": "your token here"
 }
