@@ -18,15 +18,23 @@ for (const file of eventFiles) {
 		console.log(event.name);
 	}
 }
+
 //Command Handler
 client.commands = new Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandDirs = fs.readdirSync('./commands') //todo: make this only look for dirs
 console.log('-----Loading Commands-----')
-for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-	client.commands.set(command.data.name, command);
-	console.log(command.data.name);
+for (const dir of commandDirs) {
+	const commandFiles = fs.readdirSync(`./commands/${dir}`).filter(file => file.endsWith('.js'));
+	for (const file of commandFiles) {
+		const command = require(`./commands/${dir}/${file}`);
+		client.commands.set(command.data.name, command);
+		console.log(command.data.name);
+	}
+
 }
+
+
+//todo: move this to events
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
