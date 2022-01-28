@@ -1,8 +1,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
-	category: "misc",
-	usage: "/ping",
+	category: "category-here", //current available categories [misc, music, fun]
+	usage: "/ping",   //use <> to indicate arguments, ie /play <song-name>
 	data:
 		new SlashCommandBuilder()
 		.setName('ping')
