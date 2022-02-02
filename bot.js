@@ -50,5 +50,4 @@ client.on('interactionCreate', async interaction => {
 	}
 
 });
-console.log(client.commands);
 client.login(token);
