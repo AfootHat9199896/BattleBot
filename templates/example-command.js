@@ -5,8 +5,8 @@ module.exports = {
 	usage: "/example",   //use <> to indicate arguments, ie /play <song-name>
 	data:
 		new SlashCommandBuilder()
-		.setName('example')
-		.setDescription('Describes the function of the command'),
+			.setName('example')
+			.setDescription('Describes the function of the command'),
 	async execute(interaction) {
 		//put code here
 	},
