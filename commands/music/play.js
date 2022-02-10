@@ -1,14 +1,14 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
-	category: "misc",
-	usage: "/ping",
+	category: "music",
+	usage: "/play <song>",
 	data:
 		new SlashCommandBuilder()
-			.setName('ping')
-			.setDescription('Replies with Pong!'),
+			.setName('play')
+			.setDescription('Plays a song'),
+
 	async execute(interaction) {
-		await interaction.reply('Pong!');
+		//If I had code it would go here
 	},
 };
-
